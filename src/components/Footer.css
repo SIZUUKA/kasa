@@ -1,0 +1,32 @@
+.footer {
+  background-color: #000000;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 122px;
+}
+
+.footer-text {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    gap: 10px;
+  }
+
+  .footer-text {
+    width: 122px;
+    font-size: 12px;
+    text-align: center;
+  }
+}

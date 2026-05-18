@@ -1,5 +1,5 @@
-import { useState } from "react"
-import { useEffect } from "react"
+import { useState, useEffect } from "react"
+import './Home.css'
 import Card from "../components/Card"
 import Banner from "../components/Banner"
 
@@ -9,11 +9,8 @@ function Home() {
     useEffect(() => {
         fetch("http://localhost:8080/api/properties")
             .then((response) => response.json())
-            .then((data) => { 
-                console.log(data)
+            .then((data) => {
                 setLogements(data)
-
-
             })
 
     }, [])

@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom'
+import './Card.css'
+
 function Card({ logement }) {
   return (
-    <div className="card">
-      <img src={logement.cover}  />
-      <h2 className="card-title">{logement.title}</h2>
-    </div>
+    <Link to={`/logement/${logement.id}`} className="card-lien">
+      <article className="card">
+        <img src={logement.cover} alt={logement.title} />
+        <h2 className="card-title">{logement.title}</h2>
+      </article>
+    </Link>
   )
 }
 

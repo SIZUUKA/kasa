@@ -1,0 +1,68 @@
+/* --- Page erreur 404 (étape 6) --- */
+.page-erreur {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px 120px;
+  gap: 66px;
+  color: #ff6060;
+}
+
+.page-erreur__code {
+  margin: 0;
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 0.85;
+}
+
+.page-erreur__titre {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ff6060;
+}
+
+.page-erreur__lien {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .page-erreur {
+    padding: 40px 16px 80px;
+    gap: 32px;
+  }
+
+  .page-erreur__code {
+    font-size: 160px;
+  }
+
+  .page-erreur__titre {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .page-erreur {
+    gap: 113px;
+  }
+
+  .page-erreur__code {
+    font-size: 96px;
+  }
+
+  .page-erreur__titre {
+    font-size: 18px;
+  }
+
+  .page-erreur__lien {
+    font-size: 14px;
+  }
+
+}

@@ -1,13 +1,16 @@
+import './Layout.css'
 import Header from './Header'
 import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
 
-export default function Layout({ children }) {
+export default function Layout() {
   return (
-    <>
-      <Header />
-      <Outlet /> {/* c'est le contenu de la page */}
-      <Footer />
-    </>
-  )
+    <div className="main">
+        <div className="layout">
+            <Header />
+            <Outlet /> {/* c'est le contenu de la page */}
+        </div>
+        <Footer />
+    </div>
+)
 }

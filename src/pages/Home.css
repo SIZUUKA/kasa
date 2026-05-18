@@ -1,0 +1,27 @@
+.logements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 56px 60px;
+  padding: 56px 50px 43px 50px;
+  background: #f6f6f6;
+  border-radius: 25px;
+  margin: 0 0 43px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .logements {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+    margin: 0 20px 32px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logements {
+    background: none;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}

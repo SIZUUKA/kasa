@@ -1,0 +1,93 @@
+/* --- Page À propos + composant Collapse (étape 5) --- */
+.page-a-propos {
+  margin-bottom: 43px;
+}
+
+.page-a-propos__bloc {
+  max-width: 1023px;
+  margin: 31px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.collapse {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.collapse-entete {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 10px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  background-color: #ff6060;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.collapse-titre {
+  flex: 1;
+  font-weight: bold;
+}
+
+.collapse-chevron {
+  display: inline-block;
+  font-size: 28px;
+  line-height: 1;
+  transition: transform 0.25s ease;
+  transform: rotate(0deg);
+}
+
+.collapse-chevron--ouvert {
+  transform: rotate(180deg);
+}
+
+.collapse-corps {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: #f6f6f6;
+}
+
+
+
+.collapse-contenu {
+  padding: 20px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.collapse-contenu p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .collapse-entete {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .collapse-titre {
+    font-size: 13px;
+  }
+
+  .collapse-chevron {
+    width: 16px;
+  }
+
+  .collapse-contenu {
+    font-size: 14px;
+  }
+}

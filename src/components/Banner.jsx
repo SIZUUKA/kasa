@@ -1,10 +1,12 @@
-import bannerImg from '../assets/IMG.png'
+import './Banner.css'
 
-export default function Banner({ title }) {
-    return (
-        <div className="banner">
-            <img src={bannerImg} alt="banner" />
-            <h1>{title}</h1>
-        </div>
-    )
+function Banner({ title }) {
+  return (
+    <div className="banner">
+      <img src="/IMG.png" alt="bannière" />
+      {title && <h1>{title}</h1>}
+    </div>
+  )
 }
+
+export default Banner

@@ -12,10 +12,10 @@ function Router() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/logement/:id" element={<Logement />} /> {/*  Page d'un logement - :id change selon l'appartement cliqué */ }
+          <Route path="/logement/:id" element={<Logement />} />
           <Route path="*" element={<Error />} />
         </Route>
-         </Routes>
+      </Routes>
     </BrowserRouter>
   )
 }

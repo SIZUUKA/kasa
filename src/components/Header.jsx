@@ -1,15 +1,20 @@
-import { Link } from 'react-router-dom'
-import logo from '../assets/LOGO.png'
+import { Link, useLocation } from 'react-router-dom'
+import './Header.css'
 
 export default function Header() {
-    return(
+    const { pathname } = useLocation()
+    return (
         <header className="header">
             <Link to="/">
-                <img src={logo} alt="Kasa" />
+                <img src="/LOGO.png" alt="Kasa" />
             </Link>
             <nav>
-                <Link to="/">Accueil</Link>
-                <Link to="/about">A Propos</Link>
+                <Link to="/" className={pathname === '/' ? 'active' : ''}>
+                    Accueil
+                </Link>
+                <Link to="/about" className={pathname === '/about' ? 'active' : ''}>
+                    A propos
+                </Link>
             </nav>
         </header>
     )
