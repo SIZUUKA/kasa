@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import Collapse from './Collapse'
+import Collapse from '../src/components/Collapse'
 
 describe('Collapse', () => {
   it('affiche le titre passé en prop', () => {

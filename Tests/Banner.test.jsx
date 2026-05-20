@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Banner from './Banner'
+import Banner from '../src/components/Banner'
 
 describe('Banner', () => {
   it('affiche le titre quand on le passe en prop', () => {
