@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import './Logement.css'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate} from 'react-router-dom'
 import Slideshow from '../components/Slideshow'
 import Collapse from '../components/Collapse'
+
 
 function Etoiles({ note }) {
   return (
@@ -20,13 +21,20 @@ function Etoiles({ note }) {
 function Logement() {
   const { id } = useParams()
   const [logement, setLogement] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     let ignore = false
     fetch(`http://localhost:8080/api/properties/${id}`)
-      .then((reponse) => reponse.json())
+      .then((reponse) =>{
+        if (!reponse.ok) {
+          navigate('/404')
+          return
+      }
+      return reponse.json()
+      })
       .then((donnees) => {
-        if (!ignore) {
+        if (!ignore && donnees) {
           setLogement(donnees)
         }
       })
